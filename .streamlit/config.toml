@@ -1,0 +1,6 @@
+[theme]
+base="dark"  # Sets the base theme to dark mode
+primaryColor="#0000ff"  # Sets the primary color (for buttons, etc.)
+
+[browser]
+gatherUsageStats = false
