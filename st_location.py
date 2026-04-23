@@ -40,6 +40,7 @@ def st_location():
     if st.session_state.user_location:
         target_locations = {'Bislet stadion': (59.925020, 10.733377),
                             'Sandvika stasjon': (59.892642, 10.525238),
+                            'Lysaker stasjon': (59.913549, 10.637623),
                             'Oslo Rådhus': (59.912260, 10.733885),
                             'Birkelunden': (59.926771, 10.760136)}
         location_target = target_locations[st.selectbox("Select a target location to compare distance:", options=list(target_locations.keys()))]
