@@ -15,7 +15,6 @@ with st.spinner('Laster inn...'):
 
 # Add title
 st.title(st.session_state.settings.get('Tittel:', 'Rebus'))
-st.write(f'DEBUG: google_worksheet_id = {st.session_state.google_worksheet_id}')
 
 # Add title image
 if st.session_state.get('title_image'):
@@ -38,7 +37,7 @@ else:
 # Handle Login Tab
 if selected_tab == "Logg inn":
     handle_login()
-    st_location()  # Show location info on login page
+    # st_location()  # Show location info on login page
 # Handle Task Tabs
 elif selected_tab == "Last opp bilder":
     extra_tasks()
