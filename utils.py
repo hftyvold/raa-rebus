@@ -95,7 +95,7 @@ def fetch_all_attempts(worksheets):
 # Log hint request
 def log_hint_request(user, task_nr):
     client = st.session_state.client
-    worksheet = client.open("Rebus").worksheet("hint_requests")
+    worksheet = client.open_by_key(st.session_state.google_worksheet_id).worksheet("hint_requests")
     timestamp = get_current_timestamp()
     new_row = [user, task_nr, timestamp]
     worksheet.append_row(new_row)
@@ -103,7 +103,7 @@ def log_hint_request(user, task_nr):
 # Log answer
 def log_answer(user, task_nr, submitted_answer, is_correct): 
     client = st.session_state.client
-    worksheet = client.open("Rebus").worksheet("answers")
+    worksheet = client.open_by_key(st.session_state.google_worksheet_id).worksheet("answers")
     timestamp = get_current_timestamp()
     correct_str = "Yes" if is_correct else "No"
     new_row = [user, task_nr, submitted_answer, correct_str, timestamp]
