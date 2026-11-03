@@ -15,6 +15,7 @@ with st.spinner('Laster inn...'):
 
 # Add title
 st.title(st.session_state.settings.get('Tittel:', 'Rebus'))
+st.write(f'DEBUG: google_worksheet_id = {st.session_state.google_worksheet_id}')
 
 # Add title image
 if st.session_state.get('title_image'):
