@@ -4,6 +4,7 @@ from st_login import handle_login, handle_logout
 from st_task_tabs import display_task_tab
 from st_extra_tasks import extra_tasks
 from st_admin import admin_page
+from st_location import st_location
 import time
 apply_styles()
 # try:
@@ -36,6 +37,7 @@ else:
 # Handle Login Tab
 if selected_tab == "Logg inn":
     handle_login()
+    st_location()  # Show location info on login page
 # Handle Task Tabs
 elif selected_tab == "Last opp bilder":
     extra_tasks()

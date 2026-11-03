@@ -19,6 +19,8 @@ from utils import (
 )
 
 def apply_styles():
+    st.set_page_config(page_title="Raa Rebus",
+                       initial_sidebar_state="expanded")
     # Hide Streamlit's footer
     hide_streamlit_style = """
         <style>
